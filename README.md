@@ -22,7 +22,7 @@ Responsive Weather application
 
 # Features
 
-* Five-Day Forecast
+* Five-Day Forecast (displaying the average temperature for the day)
 * Switch F to C and C to F
 * Responsive Interface
 * Refresh
