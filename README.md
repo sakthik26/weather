@@ -25,6 +25,7 @@ Responsive Weather application
 * Five-Day Forecast (displaying the average temperature for the day)
 * Switch F to C and C to F
 * Responsive Interface
+* Search (Only Germany for now)
 * Refresh
 * Error handling 
   - When a country searched is not found
