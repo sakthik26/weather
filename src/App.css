@@ -28,6 +28,7 @@ body {
   margin: auto;
   overflow: hidden;
   padding: 0 0.5rem;
+  margin-top: 20px;
 }
 
 a {
@@ -37,10 +38,6 @@ a {
 
 a:hover {
   color: #666666;
-}
-
-ul {
-  list-style: none;
 }
 
 img {
@@ -77,120 +74,13 @@ img {
   text-align: center;
 }
 
-.card {
-  border: #ccc 1px dotted;
-  padding: 1rem 0.75rem 0.75rem 0.75rem;
-  margin-bottom: 1rem;
-}
 
-.badge {
-  display: inline-block;
-  font-size: 0.8rem;
-  padding: 0.2rem 0.7rem;
-  text-align: center;
-  margin: 0.3rem;
-  background: var(--light-color);
-  color: #333;
-  border-radius: 5px;
-}
-
-.alert {
-  padding: 0.7rem;
-  margin: 1rem 0;
-  opacity: 0.9;
-  background: var(--light-color);
-  color: #333;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  background: var(--light-color);
-  color: #fff;
-  padding: 0.4rem 1.3rem;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-.btn-primary,
-.bg-primary,
-.badge-primary,
-.alert-primary {
+.bg-primary
+{
   background: var(--primary-color);
   color: #fff;
 }
 
-.btn-light,
-.bg-light,
-.badge-light,
-.alert-light {
-  background: var(--light-color);
-  color: #333;
-}
-
-.btn-dark,
-.bg-dark,
-.badge-dark,
-.alert-dark {
-  background: var(--dark-color);
-  color: #fff;
-}
-
-.btn-danger,
-.bg-danger,
-.badge-danger,
-.alert-danger {
-  background: var(--danger-color);
-  color: #fff;
-}
-
-.btn-success,
-.bg-success,
-.badge-success,
-.alert-success {
-  background: var(--success-color);
-  color: #fff;
-}
-
-.btn-white,
-.bg-white,
-.badge-white,
-.alert-white {
-  background: #fff;
-  color: #333;
-  border: #ccc solid 1px;
-}
-
-.btn-active {
-  color: #fff;
-  background-color: #333333;
-  border: #fff solid 3px;
-}
-
-.btn-not-active {
-  color: #333333;
-  background-color: #fff;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-.bg-light,
-.badge-light {
-  border: #ccc solid 1px;
-}
-
-.round-img {
-  border-radius: 50%;
-}
 
 /* Forms */
 input {
@@ -222,15 +112,6 @@ button {
   font: inherit;
 }
 
-/**************************/
-/**************************/
-/* Component Specific CSS */
-/**************************/
-/**************************/
-
-/**************************/
-/*    Navbar Component    */
-/**************************/
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -251,65 +132,8 @@ button {
 }
 
 .logo__weatherAppName {
-  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-size: 1.3rem
 }
-
-.forecast-type-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-/**************************/
-/*  Preloader Component   */
-/**************************/
-
-.loadingTextAndSpinnerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10rem;
-}
-
-.loadingText {
-  /* Make the whitespace surrounding the 'Loading' text match the whitespace around the 'spinner' gif */
-  height: 5rem;
-  width: auto;
-  padding-left: 0.8rem;
-
-  /* Set the css for the 'Loading' text */
-  font-size: 3rem;
-  line-height: 1.6;
-
-  /* Make the color of the 'Loading' text black */
-  color: #000000;
-
-  /* Make the background color of the 'Loading' text match the background color of the 'spinner' gif */
-  background-color: #ffffff;
-}
-
-.loadingSpinner {
-  /* This is the height and width of the spinner container */
-  height: 5rem;
-  width: 5rem;
-
-  /* This is the CSS for the background image */
-  background-image: url(/spinner.gif);
-  background-repeat: no-repeat;
-  background-position: center;
-  /* This is the size of the spinner gif being used as the background image of the spinner container */
-  background-size: 12rem;
-
-  /* Space the spinner gif a little closer to the 'Loading' text */
-  margin-left: -0.7rem;
-  /* prevent the extra whitespace from the spinner gif from covering up the 'Loading' text by hiding the whitespace under the 'Loading' text by adjust the zIndex of the spinner gif */
-  z-index: -1;
-}
-
-/***************************/
-/* WeatherHeader Component */
-/***************************/
 
 .weatherHeader {
   text-align: center;
@@ -317,131 +141,3 @@ button {
   font-weight: bold;
   margin-top: 40px;
 }
-
-/*****************************/
-/* FiveDayForecast Component */
-/*****************************/
-
-/* Mobile CSS for FiveDayForecast */
-
-.displayFiveDayForecast {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-/* Tablet / Desktop CSS for FiveDayForecast */
-
-@media (min-width: 600px) {
-  .displayFiveDayForecast {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-/********************************************/
-/*              Shared CSS for              */
-/********************************************/
-/*         ForecastItem Component           */
-/*                                          */
-/*                    AND                   */
-/*                                          */
-/*  MoreDetailsSingleDayForecast Component  */
-/********************************************/
-
-/* Mobile CSS for ForcastItem AND MoreDetailsSingleDayForecast */
-
-.dayOfTheWeek {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(1.5rem, 6vw, 3rem);
-}
-
-.weatherImage {
-  flex: 1;
-  padding-right: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.weatherDetails {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.weatherDetails__weatherDescription {
-  /* font-size: clamp(1rem, 4vw, 2.2rem); */
-  font-size: clamp(1rem, 4vw, 2rem);
-}
-.search-and-refresh form{
-  display: flex;
-}
-.weatherDetails__weatherTemp {
-  /* font-size: clamp(1rem, 4vw, 2.2rem); */
-  font-size: clamp(1rem, 4vw, 2rem);
-}
-
-.weatherDetails__detailsBtn,
-.weatherBack__detailsBtn {
-  /* font-size: clamp(0.7rem, 2vw, 1.5rem); */
-  font-size: clamp(0.7rem, 2vw, 1rem);
-  margin: 0.7em 0;
-}
-
-/* Tablet / Desktop CSS for ForecastItem AND MoreDetailsSingleDayForecast */
-@media (min-width: 600px) {
-  /* Remove right padding in tablet / desktop view */
-  .weatherImage {
-    padding-right: 0;
-  }
-}
-
-/********************************************/
-/*         ForecastItem Component           */
-/********************************************/
-
-/* Mobile CSS for ForcastItem */
-
-.singleDayWeatherInfoContainer__fiveDayForecast,
-.singleDayWeatherInfoContainer__currentDayForecast {
-  display: flex;
-}
-
-/* Tablet / Desktop CSS for ForecastItem */
-@media (min-width: 600px) {
-  .singleDayWeatherInfoContainer__fiveDayForecast {
-    flex-direction: column;
-  }
-}
-
-/********************************************/
-/*  MoreDetailsSingleDayForecast Component  */
-/********************************************/
-
-/* Mobile CSS for MoreDetailsSingleDayForecast */
-
-.moreDetailsSingleDayForecastContainer {
-  display: flex;
-}
-
-/* Mobile / Tablet / Desktop CSS for MoreDetailsSingleDayForecast */
-
-.moreWeatherDetails {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top: solid 1px #ccc;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  /* margin-bottom: 5rem; */
-  /* font-size: clamp(1rem, 4vw, 2.2rem); */
-
-  font-size: clamp(1rem, 4vw, 1.7rem);
-};
